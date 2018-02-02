@@ -28,10 +28,11 @@ $(document).ready(function(){
 	$("#add-player").on("click",function(){
 		var newPlayer = $("#new-player-input").val().trim()
 		
-		if(runningBacks.indexof(newPlayer) === 1 && newPlayer!==""){
+		if(runningBacks.indexOf(newPlayer) === -1 && newPlayer!==""){
 		runningBacks.push(newPlayer);	
 		addingNewButtons();
 		}
+		console.log ("help", newPlayer)
 	
 	})
 
